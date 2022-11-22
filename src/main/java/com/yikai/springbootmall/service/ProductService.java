@@ -1,6 +1,6 @@
 package com.yikai.springbootmall.service;
 
-import com.yikai.springbootmall.constant.ProductCategory;
+import com.yikai.springbootmall.dto.ProductQueryParams;
 import com.yikai.springbootmall.dto.ProductRequest;
 import com.yikai.springbootmall.model.Product;
 
@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface ProductService {
 
-    List<Product> getProducts(ProductCategory category, String search);
+    List<Product> getProducts(ProductQueryParams productQueryParams);
 
     Product getProductById(Integer productId);
 

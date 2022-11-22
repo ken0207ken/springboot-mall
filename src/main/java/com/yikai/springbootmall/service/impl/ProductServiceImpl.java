@@ -1,7 +1,7 @@
 package com.yikai.springbootmall.service.impl;
 
-import com.yikai.springbootmall.constant.ProductCategory;
 import com.yikai.springbootmall.dao.ProductDao;
+import com.yikai.springbootmall.dto.ProductQueryParams;
 import com.yikai.springbootmall.dto.ProductRequest;
 import com.yikai.springbootmall.model.Product;
 import com.yikai.springbootmall.service.ProductService;
@@ -17,8 +17,8 @@ public class ProductServiceImpl implements ProductService {
     ProductDao productDao;
 
     @Override
-    public List<Product> getProducts(ProductCategory category, String search) {
-        return productDao.getProducts(category, search);
+    public List<Product> getProducts(ProductQueryParams productQueryParams) {
+        return productDao.getProducts(productQueryParams);
     }
 
     @Override
